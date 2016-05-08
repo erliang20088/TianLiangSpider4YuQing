@@ -1,0 +1,136 @@
+#新浪新闻	news.sina.com.cn	http://news.sina.com.cn/[\s\S]*/[\s\S]*/[\d]+\.shtml	httpclient
+#新浪新闻	news.sina.com.cn	http://news.sina.com.cn/[\s\S]*	httpclient
+
+#sina
+新浪新闻	news.sina.com.cn	http://[\S]+.sina.com.cn/[\s\S]*	phantomjs	{"config_option":{"host_match_wildcard":false}}
+	标题	h1#artibodyTitle
+	作者	div.page-info>span>span
+	发布时间	div.page-info>span.time-source#=>#([\s]*#split_small#[\S]*#split_small#[\s]*)
+	正文	div#artibody>p
+	#评论数	span#commentCount1
+	
+新浪财经	finance.sina.com.cn	http://finance.sina.com.cn/[\s\S]*	phantomjs
+	标题	h1#artibodyTitle
+	作者	div.page-info>span>span#=>#(#split_small#[\S]+#split_small#&nbsp)
+	发布时间	div.page-info>span.time-source#=>#([\S]+#split_small#[\S]*#split_small#[\s]+)
+	正文	div#artibody>p
+	评论数	span#commentCount1
+
+新浪娱乐	ent.sina.com.cn	http://ent.sina.com.cn/[\s\S]*	phantomjs
+	标题	h1#main_title
+	作者	span#media_name>a.fred
+	发布时间	span.time-source>span.titer
+	正文	div.content>p
+	评论数	span#commentCount1
+
+
+#腾讯
+
+腾讯新闻	news.qq.com	http://news.qq.com/[\s\S]*	phantomjs
+	标题	div.hd>h1
+	作者	div.ll>span.color-a-1
+	发布时间	div.ll>span.article-time
+	正文	div#Cnt-Main-Article-QQ>p
+	评论数	span.all-number-comment
+
+腾讯财经	finance.qq.com	http://finance.qq.com/[\s\S]*	phantomjs
+	标题	div.hd>h1
+	作者	span.where
+	发布时间	span.pubTime
+	正文	div#Cnt-Main-Article-QQ>p
+	评论数	span.all-number-comment	
+
+腾讯娱乐	ent.qq.com	http://ent.qq.com/[\s\S]*	phantomjs
+	标题	div.hd>h1
+	作者	span.a_source
+	发布时间	span.a_time
+	正文	div#Cnt-Main-Article-QQ>p
+	#正文	a#commentTotleNum#=>#(#split_small#[\S\s]*#split_small#条评论)
+
+	
+
+#网易
+	
+网易新闻	news.163.com	http://news.163.com/[\s\S]*	phantomjs
+	标题	h1#h1title
+	作者	a#ne_article_source
+	发布时间	div#epContentLeft>div.clearfix>div.ep-time-soure#=>#(#split_small#[\S\s]*#split_small#[　]*来源)
+	正文	div#endText>p
+	评论数	div.ep-tie-top
+	
+
+网易娱乐	ent.163.com	http://ent.163.com/[\s\S]*	phantomjs
+	标题	h1#h1title
+	作者	a#ne_article_source
+	发布时间	div#epContentLeft>div.clearfix>div.ep-time-soure#=>#(#split_small#[\S\s]*#split_small#[　]*来源)
+	正文	div#endText>p
+	#评论数div.ep-tie-top#split_union#a.ep-cnum-tie
+	评论数	a.ep-cnum-tie
+
+网易娱乐	ent.163.com	http://ent.163.com/[\s\S]*	phantomjs
+	标题	h1#h1title
+	作者	a#ne_article_source
+	发布时间	div#epContentLeft>div.clearfix>div.ep-time-soure#=>#(#split_small#[\S\s]*#split_small#[　]*来源)
+	正文	div#endText>p
+	#评论数div.ep-tie-top#split_union#a.ep-cnum-tie
+	评论数	div.ep-tie-top
+
+
+网易财经	money.163.com	http://money.163.com/[\s\S]*	phantomjs
+	标题	h1#h1title
+	作者	div.ep-time-soure>a
+	发布时间	div.ep-time-soure#=>#(#split_small#[\s\S]+#split_small#　来源) 
+	正文	div#endText>p
+	评论数	div.ep-tie-top	
+
+#搜狐
+搜狐新闻	news.sohu.com	http://news.sohu.com/[\s\S]*	phantomjs
+	标题	h1
+	作者	span#author_baidu#=>#(作者：#split_small#[\s\S]+#split_small#[\S]*)
+	发布时间	div#pubtime_baidu 
+	正文	div#contentText
+	评论数	span.f12
+
+搜狐财经	business.sohu.com	http://business.sohu.com/[\s\S]*	phantomjs
+	标题	h1
+	作者	span#author_baidu#=>#(作者：#split_small#[\s\S]+#split_small#[\S]*)
+	发布时间	div#pubtime_baidu 
+	正文	div#contentText
+	评论数	span.f12
+
+搜狐娱乐	yule.sohu.com	http://yule.sohu.com/[\s\S]*	phantomjs
+	标题	h1
+	作者	span#source_baidu#=>#(来源：#split_small#[\s\S]+#split_small#[\S]*)
+	发布时间	div#pubtime_baidu 
+	正文	div#contentText
+	评论数	span.f12
+
+搜狐音乐	music.yule.sohu.com	http://music.yule.sohu.com/[\s\S]*	phantomjs
+	标题	h1
+	作者	span#source_baidu#=>#(来源：#split_small#[\s\S]+#split_small#[\S]*)
+	发布时间	div#pubtime_baidu 
+	正文	div#contentText
+	评论数	span.f12					
+
+#凤凰网	
+凤凰新闻	news.ifeng.com	http://news.ifeng.com/[\s\S]*	phantomjs
+	标题	h1
+	作者	[itemprop=publisher]
+	发布时间	span[itemprop=datePublished] 
+	正文	div#main_content>p
+	评论数	em.js_cmtNum
+
+凤凰财经	finance.ifeng.com	http://finance.ifeng.com/[\s\S]*	phantomjs
+	标题	h1
+	作者	[itemprop=publisher]
+	发布时间	span[itemprop=datePublished] 
+	正文	div#main_content>p
+	评论数	em.js_cmtNum	
+
+凤凰娱乐	yue.ifeng.com	http://yue.ifeng.com/[\s\S]*	phantomjs
+	标题	h1#artical_topic
+	作者	[itemprop=publisher]
+	发布时间	span[itemprop=datePublished] 
+	正文	div#main_content>p
+	评论数	em					
+		

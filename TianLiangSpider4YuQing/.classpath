@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="spider.core"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="spider.ws"/>
+	<classpathentry kind="src" path="spider.filter"/>
+	<classpathentry kind="lib" path="lib/antlr-2.7.4.jar"/>
+	<classpathentry kind="lib" path="lib/cpdetector-1.0.10.jar"/>
+	<classpathentry kind="lib" path="lib/jargs-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/jchardet-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/bloomfilter-0.1_ansj_zel.jar"/>
+	<classpathentry kind="lib" path="lib/cxf-2.3.11.jar"/>
+	<classpathentry kind="lib" path="lib/neethi-2.0.5.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangWebServiceClient-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangWebServiceCommon-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/url-analysis-0.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/weibo_client.jar"/>
+	<classpathentry kind="lib" path="lib/wsdl4j-1.6.2.jar"/>
+	<classpathentry kind="lib" path="lib/XmlSchema-1.4.7.jar"/>
+	<classpathentry kind="lib" path="lib/jsoupparser_zel-0.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/ansj_seg_4_zel-2.0.7.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangAnalyzer-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangBodyExtractor-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangEmotionClassfy-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangKeywordExtractor-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangNlpCommon-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangSummaryExtractor-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/TianLiangThemeExtractor-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/nlp-lang-0.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

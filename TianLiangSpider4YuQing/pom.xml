@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.zel.tianliang</groupId>
+	<artifactId>TianLiangSpider4YuQing</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<repositories>
+		<repository>
+			<id>sonatype</id>
+			<name>Sonatype Groups</name>
+			<url>https://oss.sonatype.org/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>apache.releases.https</id>
+			<name>Apache Release Distribution Repository</name>
+			<url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+		</repository>
+		<repository>
+			<id>maven2-repository.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>nexus</id>
+			<url>http://10.150.144.28/nexus/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>snapshots</id>
+			<name>tianliang</name>
+			<url>http://119.90.57.109:8081/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<!-- 引入httpclient最新包 -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3.5</version>
+		</dependency>
+		<!-- 引入gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+		<!-- cpdector beginning -->
+		<!-- <dependency> <groupId>net.sourceforge.cpdetector</groupId> <artifactId>cpdetector</artifactId> 
+			<version>1.0.10</version> </dependency> <dependency> <groupId>antlr</groupId> 
+			<artifactId>antlr</artifactId> <version>2.7.4</version> </dependency> <dependency> 
+			<groupId>net.sourceforge.jchardet</groupId> <artifactId>jchardet</artifactId> 
+			<version>1.0</version> </dependency> <dependency> <groupId>net.sourceforge.jchardet</groupId> 
+			<artifactId>jargs</artifactId> <version>1.0</version> </dependency> -->
+		<!-- cpdector end -->
+
+		<!-- 布隆过滤器 -->
+		<!-- <dependency> <groupId>com.zel.nlp</groupId> <artifactId>bloomfilter</artifactId> 
+			<version>0.1_ansj_zel</version> </dependency> <dependency> <groupId>com.zel.ws</groupId> 
+			<artifactId>TianLiangWebServiceClient</artifactId> <version>0.1-SNAPSHOT</version> 
+			</dependency> <dependency> <groupId>com.tianliang.nlp</groupId> <artifactId>TianLiangNlpCommon</artifactId> 
+			<version>0.1-SNAPSHOT</version> </dependency> <dependency> <groupId>com.vaolan</groupId> 
+			<artifactId>url-analysis</artifactId> <version>0.0.1-SNAPSHOT</version> </dependency> 
+			<dependency> <groupId>com.zel.parser</groupId> <artifactId>jsoupparser_zel</artifactId> 
+			<version>0.0.1-SNAPSHOT</version> </dependency> -->
+		<!-- <dependency> <groupId>org.apache.cxf</groupId> <artifactId>cxf-rt-frontend-jaxws</artifactId> 
+			<version>3.0.4</version> </dependency> -->
+
+	</dependencies>
+
+</project>
